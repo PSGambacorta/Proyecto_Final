@@ -1,0 +1,34 @@
+### Consultar Todas las Casas de la DB
+GET http://localhost:3000/api/casas/
+
+### Consultar una casa por Id
+GET http://localhost:3000/api/casas/66b17cac688e7382fb2f2260
+
+### Crear nueva Casa
+POST http://localhost:3000/api/casas/
+Content-Type: application/json
+
+{
+    "tipo": "Casa PH",
+    "locacion": "Alquiler Prolongado",
+    "ciudad": "Ramos Mejia",
+    "provincia": "Buenos Aires",
+    "foto": "/assets/foto3.jpg",
+    "ambientes": "cuatro"
+}
+
+### Editar una Casa.
+PUT  http://localhost:3000/api/casas/66b17cac688e7382fb2f2260
+Content-Type: application/json
+
+{
+    "tipo": "Departamento",
+    "locacion": "Alquiler Temporario",
+    "ciudad": "Rosariio",
+    "provincia": "Santa Fe",
+    "foto": "/assets/foto1.jpg",
+    "ambientes": "tres"
+}
+
+### Eiminar una Casa.
+DELETE http://localhost:3000/api/casas/66b265afe18075f162dd3b64
