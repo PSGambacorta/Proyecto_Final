@@ -16,6 +16,14 @@ exports.readCasasId = async (id)=>{
     }
 }
 
+exports.readCasasCiudad = async (ciudad)=>{
+    try {
+         return await casasRepository.readCasasCiudad(ciudad);
+    } catch (error) {
+         console.log(error);
+    }
+}
+
 exports.createCasa = async (casaData)=>{
     try {
          return await casasRepository.createCasa(casaData);

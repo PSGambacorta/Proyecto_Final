@@ -4,6 +4,9 @@ GET http://localhost:3000/api/casas/
 ### Consultar una casa por Id
 GET http://localhost:3000/api/casas/66b17cac688e7382fb2f2260
 
+### Consultar Casas por Ciudad
+GET http://localhost:3000/api/casas/
+
 ### Crear nueva Casa
 POST http://localhost:3000/api/casas/
 Content-Type: application/json
@@ -22,7 +25,7 @@ PUT  http://localhost:3000/api/casas/66b17cac688e7382fb2f2260
 Content-Type: application/json
 
 {
-    "tipo": "Departamento",
+    "tipo": "Departamentooooo",
     "locacion": "Alquiler Temporario",
     "ciudad": "Rosariio",
     "provincia": "Santa Fe",

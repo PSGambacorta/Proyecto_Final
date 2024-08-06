@@ -20,6 +20,16 @@ exports.readCasaId = async(req, res)=>{
     }
 }
 
+exports.readCasasCiudad = async(req, res)=>{
+    try {
+        let ciudad = req.params.ciudad;
+        let casas = await casasService.readCasasCiudad(ciudad);
+        res.status(200).send(casas)
+    } catch (error) {
+        res.status(500).send('Hubo un error al intentar Filtrar por ciudad')
+    }
+}
+
 exports.createCasa = async(req, res)=>{
     try {
         let casaCreada = await casasService.createCasa(req.body);

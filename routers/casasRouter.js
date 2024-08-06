@@ -8,6 +8,7 @@ const casasController = require('../controllers/casasController');
 //Rutas
 casasRouter.get('/',casasController.readCasas);
 casasRouter.get('/:id',casasController.readCasaId);
+casasRouter.get('/:ciudad',casasController.readCasasCiudad);
 casasRouter.post('/',casasController.createCasa);
 casasRouter.put('/:id',casasController.updateCasa);
 casasRouter.delete('/:id',casasController.deleteCasa);

@@ -17,14 +17,17 @@ exports.readCasas = async()=>{
 
 exports.readCasaId = async(id)=>{
     try {
-        if (!id) {
-            return "Id incorrecto!!!";
-        }
         let casa = await Casas.findById(id);
-        if (!casa) {
-           return "No se encontró la casas solicitada...!"
-        }
         return casa;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+exports.readCasasCiudad = async(ciudad)=>{
+    try {
+        let casas = await Casas.find(ciudad);
+        return casas
     } catch (error) {
         console.log(error);
     }
@@ -42,14 +45,7 @@ exports.createCasa = async(casaData)=>{
 
 exports.updateCasa = async(id, casaData)=>{
     try {
-        if (!id) {
-            return "Id incorrecto!!!";
-        }
-        let casaB = await Casas.findById({_id:id});
-        if (!casaB) {
-            return "No se encontró la casas solicitada...!"
-        }
-        const updateCasa = await Casas.findOneAndReplace({_id:id},casaData);
+        const updateCasa = await Casas.findOneAndUpdate({_id:id},casaData, {new:true});
         return updateCasa;
     } catch (error) {
         console.log(error);
@@ -58,13 +54,7 @@ exports.updateCasa = async(id, casaData)=>{
 
 exports.deleteCasa = async(id)=>{
     try {
-        if (!id) {
-            return "Id incorrecto!!!";
-        }
         const eliminado = await Casas.findOneAndDelete({_id:id});
-        if (!eliminado) {
-            return "No se encontró la casas solicitada...!"
-        }
         return eliminado;
     } catch (error) {
         console.log(error);
