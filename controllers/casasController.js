@@ -23,6 +23,8 @@ exports.readCasaId = async(req, res)=>{
 exports.readCasasCiudad = async(req, res)=>{
     try {
         let ciudad = req.params.ciudad;
+        console.log(ciudad)
+        console.log(typeof ciudad)
         let casas = await casasService.readCasasCiudad(ciudad);
         res.status(200).send(casas)
     } catch (error) {

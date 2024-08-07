@@ -5,7 +5,7 @@ GET http://localhost:3000/api/casas/
 GET http://localhost:3000/api/casas/66b17cac688e7382fb2f2260
 
 ### Consultar Casas por Ciudad
-GET http://localhost:3000/api/casas/
+GET http://localhost:3000/api/casas/Punta
 
 ### Crear nueva Casa
 POST http://localhost:3000/api/casas/

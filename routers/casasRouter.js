@@ -3,7 +3,7 @@ const casasRouter = express.Router();
 const casasController = require('../controllers/casasController');
 
 //Middlewares
-//casasRouter.use(express.json());
+casasRouter.use(express.json());
 
 //Rutas
 casasRouter.get('/',casasController.readCasas);

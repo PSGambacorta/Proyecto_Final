@@ -26,7 +26,7 @@ exports.readCasaId = async(id)=>{
 
 exports.readCasasCiudad = async(ciudad)=>{
     try {
-        let casas = await Casas.find(ciudad);
+        let casas = await Casas.findOne({ciudad: ciudad});
         return casas
     } catch (error) {
         console.log(error);
