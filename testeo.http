@@ -7,6 +7,9 @@ GET http://localhost:3000/api/casas/66b17cac688e7382fb2f2260
 ### Consultar Casas por Ciudad
 GET http://localhost:3000/api/casas/filtros/ciudad/Rosario
 
+## Consultar Casas por Tipo de Alquiler
+GET http://localhost:3000/api/casas/filtros/locacion/temporario
+
 ### Crear nueva Casa
 POST http://localhost:3000/api/casas/
 Content-Type: application/json
