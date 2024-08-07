@@ -8,7 +8,8 @@ casasRouter.use(express.json());
 //Rutas
 casasRouter.get('/',casasController.readCasas);
 casasRouter.get('/:id',casasController.readCasaId);
-casasRouter.get('/:ciudad',casasController.readCasasCiudad);
+casasRouter.get('/filtros/ciudad/:ciudad',casasController.readCasasCiudad);
+casasRouter.get('/filtros/locacion/:locacion',casasController.readCasasLocacion);
 casasRouter.post('/',casasController.createCasa);
 casasRouter.put('/:id',casasController.updateCasa);
 casasRouter.delete('/:id',casasController.deleteCasa);
