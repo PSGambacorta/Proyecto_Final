@@ -5,33 +5,36 @@ GET http://localhost:3000/api/casas/
 GET http://localhost:3000/api/casas/66b17cac688e7382fb2f2260
 
 ### Consultar Casas por Ciudad
-GET http://localhost:3000/api/casas/Punta
+GET http://localhost:3000/api/casas/filtros/ciudad/Rosario
+
+## Consultar Casas por Tipo de Alquiler
+GET http://localhost:3000/api/casas/filtros/locacion/temporario
 
 ### Crear nueva Casa
 POST http://localhost:3000/api/casas/
 Content-Type: application/json
 
 {
+    "tipo": "Casa",
+    "locacion": "Temporario",
+    "ciudad": "Ramos Mejia",
+    "provincia": "Buenos Aires",
+    "foto": "/assets/foto4.jpg",
+    "ambientes": "tres"
+}
+
+### Editar una Casa.
+PUT  http://localhost:3000/api/casas/66b260f10a36029a6cb0e213
+Content-Type: application/json
+
+{
     "tipo": "Casa PH",
-    "locacion": "Alquiler Prolongado",
+    "locacion": "Prolongado",
     "ciudad": "Ramos Mejia",
     "provincia": "Buenos Aires",
     "foto": "/assets/foto3.jpg",
     "ambientes": "cuatro"
 }
 
-### Editar una Casa.
-PUT  http://localhost:3000/api/casas/66b17cac688e7382fb2f2260
-Content-Type: application/json
-
-{
-    "tipo": "Departamentooooo",
-    "locacion": "Alquiler Temporario",
-    "ciudad": "Rosariio",
-    "provincia": "Santa Fe",
-    "foto": "/assets/foto1.jpg",
-    "ambientes": "tres"
-}
-
 ### Eiminar una Casa.
-DELETE http://localhost:3000/api/casas/66b265afe18075f162dd3b64
+DELETE http://localhost:3000/api/casas/66b2a2615a232a4804fe9a8b
